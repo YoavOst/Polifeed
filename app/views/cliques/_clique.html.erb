@@ -1,0 +1,20 @@
+<%= form_for (clique), remote: true do |f| %>
+  <div class="row">
+    <div class="field large-4 columns end">
+      <%= f.text_field :name %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="field large-12 columns">
+      <%= f.text_field :word_tokens, data: {load: clique.words} %>    
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-2 columns">
+      <%= f.submit :class => "small radius button" %>
+    </div>
+    <div class="large-3 columns end">
+      <%= link_to "בצע קונקורדונציה", words_path(:clique_id => clique.id), :class => "small radius button" %>
+    </div>
+  </div>
+<% end %>

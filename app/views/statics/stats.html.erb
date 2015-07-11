@@ -1,0 +1,24 @@
+<div class="row">
+  <ul data-orbit>
+    <li data-orbit-slide="headline-1">
+      <%= render "status_most_chars" %>
+    </li>
+    <li data-orbit-slide="headline-2">
+      <%= render "status_most_words" %>
+    </li>
+    <li data-orbit-slide="headline-3">
+      <%= render "word_most_common" %>    
+    </li>
+    <li data-orbit-slide="headline-4">
+      <%= render "word_longest" %>    
+    </li>
+    <li data-orbit-slide="headline-5">
+      <%= render "tag_most_common" %>    
+    </li>
+  </ul>
+</div>
+
+
+  <%= line_chart Party.all.map { |party|
+    {name: party.name, data: party.statuses.where(:publish_time => 10.weeks.ago.beginning_of_day..Time.zone.now).group_by_week(:publish_time).count} }, id: "status-chart2", height: "600px" %>
+

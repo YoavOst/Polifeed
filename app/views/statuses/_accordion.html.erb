@@ -1,0 +1,17 @@
+<dl class="accordion" data-accordion>
+<% @statuses.each do |st| %>
+  <dd class="accordion-navigation radius">
+    <%= link_to "#panel#{st.id}", :class => "row" do %>
+      <%= image_tag st.politician.avatar.url, :class => "small-1 columns end" %>
+      <%= render partial: "credits", object: st, as: :status %>
+      <br>
+      <%= render partial: "stats", object: st, as: :status %>
+    <% end %>
+    <div id=<%= "panel#{st.id}" %> class="content"> 
+      <%= render partial: "panel_data", object: st, as: :st %>      
+      <%= render partial: "panel_actions", object: st, as: :st %>
+    </div>
+  </dd>
+<% end %>
+</dl>
+

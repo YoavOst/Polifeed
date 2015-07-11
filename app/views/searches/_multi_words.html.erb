@@ -1,0 +1,22 @@
+<div class="row">
+  <%= render template: "cliques/index" %>
+</div>
+
+<div class="row">
+  <div class="field large-3 columns">
+  <%= f.label :clique do %>
+    <%= f.label :clique_id %>
+    <div class="row collapse">
+      <div class="field large-8 columns">
+        <%= f.select :clique_id, Clique.all.collect {|c| [ c.name, c.id ] }, :multiple => true, :label => false, :include_blank => true %>  
+      </div>
+      <div class="field large-4 columns">         
+        <%= link_to t("buttons.manage"), cliques_path, :class => "small radius button postfix", :data => {:"reveal-id" => "cliques_modal", :"reveal-ajax" => :true} %>
+        <div id="cliques_modal" class="reveal-modal" data-reveal>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  </div>
+</div>
+

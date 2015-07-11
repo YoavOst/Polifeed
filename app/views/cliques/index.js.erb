@@ -1,0 +1,11 @@
+$("#clique_object").html("<%= j (render(partial: "clique", collection: @cliques, as: :clique)) %>");
+$('#clique_word_tokens').tokenInput ('/words.json', { 
+                                    theme: 'facebook',
+                                    hintText: "הכנס מילה",
+                                    noResultsText: "לא נמצאו מילים", 
+                                    searchingText: "מחפש...",
+                                    preventDuplicates: true,
+                                    resultsLimit: 20,
+                                    propertyToSearch: 'text',
+                                    queryParam: 'q_tokens',
+                                    prePopulate: $('#clique_word_tokens').data('load')} );

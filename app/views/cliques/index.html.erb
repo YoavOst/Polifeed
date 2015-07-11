@@ -1,0 +1,22 @@
+<a class="close-reveal-modal" aria-label="Close">&#215;</a>
+
+<p id="notice"></p>
+
+<div class="row">
+  <div class="field large-4 columns">
+    <%= select_tag("cliques", options_for_select(Clique.all.collect { |c| [c.name, c.id] }), {:include_blank => true }) %> 
+  </div>
+  <div class="field large-2 columns end">         
+    <%= link_to "קבוצה חדשה", new_clique_path, :id => "new_clique_link", :remote => true, :class => "small radius button postfix" %>    
+  </div>
+</div>
+  
+<%= form_tag cliques_path, :id => "temp_id", :method => :get, :remote => true, :hidden => :true do %>
+  <p>
+    <%= text_field_tag :clique_id, params[:clique_id] %>
+    <%= submit_tag "Search", :name => "search_submit" %>
+  </p>
+<% end %>
+
+<div id="clique_object">
+</div>

@@ -1,0 +1,292 @@
+he:
+  activerecord:
+    models:
+      politician:
+        one: פוליטיקאי
+        other: פוליטיקאים
+      party:
+        one: מפלגה
+        other: מפלגות
+      status:
+        one: סטאטוס
+        other: סטאטוסים
+      clique:
+        one: קבוצה        
+        other: קבוצות
+      search:
+        one: חיפוש
+        other: חיפושים
+    attributes:
+      politician:
+        full_name: שם מלא
+        fb_page: עמוד פייסבוק
+        last_refresh_time: תאריך משיכה אחרון
+        party: מפלגה
+        location_20: מקום ברשימה לכנסת ה-20
+        created_at: תאריך יצירה
+        updated_at: תאריך עדכון
+        total_statuses: כמות סטאטוסים
+        unprocessed: סטאטוסים לא מעובדים        
+      party:
+        name: שם המפלגה
+        knesset_seats_20: מקומות בכנסת ה-20
+        created_at: תאריך יצירה
+        updated_at: תאריך עדכון
+      status:
+        fb_status_id: מזהה פייסבוק
+        politician: פוליטיקאי
+        publish_time: מועד פרסום
+        fb_get_time: מועד משיכה
+        is_processed: האם עובד?
+        tokens_count: מספר תווים
+        sentences_count: מספר משפטים
+        words_count: מספר מילים
+        created_at: תאריך יצירה
+        updated_at: תאריך עדכון
+        abs_position: מיקום מההתחלה
+        sen_num: מספר משפט
+        sen_position: מיקום במשפט
+      search:
+        party_id: מפלגה
+        politician_id: פוליטיקאי
+        start_date: תאריך פרסום מ
+        end_date: תאריך פרסום עד
+        word_text: מילה
+        clique_id: קבוצה
+        phrase_text: ביטוי
+      clique:
+        name: שם
+        words: מילים
+        word_tokens: מילים
+  date:
+    abbr_day_names:
+    - א
+    - ב
+    - ג
+    - ד
+    - ה
+    - ו
+    - ש
+    abbr_month_names:
+    -
+    - ינו
+    - פבר
+    - מרץ
+    - אפר
+    - מאי
+    - יונ
+    - יול
+    - אוג
+    - ספט
+    - אוק
+    - נוב
+    - דצמ
+    day_names:
+    - ראשון
+    - שני
+    - שלישי
+    - רביעי
+    - חמישי
+    - שישי
+    - שבת
+    formats:
+      default: ! '%d/%m/%Y'
+      long: ! '%e ב%B, %Y'
+      short: ! '%e %b'
+    month_names:
+    -    
+    - ינואר
+    - פברואר
+    - מרץ
+    - אפריל
+    - מאי
+    - יוני
+    - יולי
+    - אוגוסט
+    - ספטמבר
+    - אוקטובר
+    - נובמבר
+    - דצמבר
+    order:
+    - :day
+    - :month
+    - :year
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: בערך שעה אחת
+        other: בערך %{count} שעות
+      about_x_months:
+        one: בערך חודש אחד
+        other: בערך %{count} חודשים
+      about_x_years:
+        one: בערך שנה אחת
+        other: בערך %{count} שנים
+      almost_x_years:
+        one: כמעט שנה
+        other: כמעט %{count} שנים
+      half_a_minute: חצי דקה
+      less_than_x_minutes:
+        one: פחות מדקה אחת
+        other: פחות מ- %{count} דקות
+        zero: פחות מדקה אחת
+      less_than_x_seconds:
+        one: פחות משניה אחת
+        other: פחות מ- %{count} שניות
+        zero: פחות משניה אחת
+      over_x_years:
+        one: מעל שנה אחת
+        other: מעל %{count} שנים
+      x_days:
+        one: יום אחד
+        other: ! '%{count} ימים'
+      x_minutes:
+        one: דקה אחת
+        other: ! '%{count} דקות'
+      x_months:
+        one: חודש אחד
+        other: ! '%{count} חודשים'
+      x_seconds:
+        one: שניה אחת
+        other: ! '%{count} שניות'
+    prompts:
+      day: יום
+      hour: שעה
+      minute: דקה
+      month: חודש
+      second: שניות
+      year: שנה
+  errors:
+    format: ! '%{attribute} %{message}'
+    messages:
+      accepted: חייב באישור
+      blank: לא יכול להיות ריק
+      confirmation: לא תואם לאישורו
+      empty: לא יכול להיות ריק
+      equal_to: חייב להיות שווה ל- %{count}
+      even: חייב להיות זוגי
+      exclusion: לא זמין
+      greater_than: חייב להיות גדול מ- %{count}
+      greater_than_or_equal_to: חייב להיות גדול או שווה ל- %{count}
+      inclusion: לא נכלל ברשימה
+      invalid: לא תקין
+      less_than: חייב להיות קטן מ- %{count}
+      less_than_or_equal_to: חייב להיות קטן או שווה ל- %{count}
+      not_a_number: חייב להיות מספר
+      not_an_integer: חייב להיות מספר שלם
+      odd: חייב להיות אי זוגי
+      record_invalid: ! 'האימות נכשל: %{errors}'
+      taken: כבר בשימוש
+      too_long: "ארוך מדי (יותר מ- %{count} תווים)"
+      too_short: "קצר מדי (פחות מ- %{count} תווים)"
+      wrong_length: "לא באורך הנכון (חייב להיות %{count} תווים)"
+    template:
+      body: ! 'אנא בדוק את השדות הבאים:'
+      header:
+        one: ! 'לא ניתן לשמור את ה%{model}: שגיאה אחת'
+        other: ! 'לא ניתן לשמור את ה%{model}: %{count} שגיאות.'
+  helpers:
+    select:
+      prompt: נא לבחור
+    submit:
+      create: ! 'יצירת %{model}'
+      submit: ! 'שמור %{model}'
+      update: ! 'עדכון %{model}'
+  number:
+    currency:
+      format:
+        delimiter: ! ','
+        format: ! '%u %n'
+        precision: 2
+        separator: .
+        significant: false
+        strip_insignificant_zeros: false
+        unit: ₪
+    format:
+      delimiter: ! ','
+      precision: 3
+      separator: .
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: ! '%n %u'
+        units:
+          billion: מיליארד
+          million: מיליון
+          quadrillion: קודריליון
+          thousand: אלף
+          trillion: טריליון
+          unit: ''
+      format:
+        delimiter: ''
+        precision: 3
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: ! '%n %u'
+        units:
+          byte:
+            one: בייט
+            other: בתים
+          gb: ג'יגה-בייט
+          kb: קילו-בייט
+          mb: מגה-בייט
+          tb: טרה-בייט
+    percentage:
+      format:
+        delimiter: ''
+    precision:
+      format:
+        delimiter: ''
+  support:
+    array:
+      last_word_connector: ! ', את '
+      two_words_connector: ! ' את '
+      words_connector: ! ', '
+  time:
+    am: am
+    formats:
+      default: ! '%a %d %b %H:%M:%S %Z %Y'
+      long: ! '%d ב%B, %Y %H:%M'
+      short: ! '%d %b %H:%M'
+    pm: pm
+  will_paginate:
+    previous_label: "&#8594; קודם"
+    next_label: "הבא &#8592;"
+    page_gap: "&hellip;"
+    page_entries_info:
+      single_page:
+        zero:  "לא נמצאו %{mode}"
+        one:   "מציג %{mode} 1"
+        other: "מציג %{count} %{model}"
+      single_page_html:
+        zero:  "לא נמצאו %{model}"
+        one:   "מציג <b>%{model}</b> 1"
+        other: "מציג <b>את כל ה-&nbsp;%{count}</b> %{model}"
+      multi_page: "מציג %{model} %{from} - %{to} מתוך %{count} בסך הכל"
+      multi_page_html: "מציג %{model} <b>%{from}&nbsp;-&nbsp;%{to}</b> מתוך <b>%{count}</b> בסך הכל"
+  buttons:
+    facebook_connect: התחבר לפייסבוק
+    mass_status_update: עדכן סטאטוסים במסה
+    mass_status_process: עבד סטאטוסים במסה
+    mass_image_update: עדכן תמונות במסה
+    status_update: עדכן סטאטוסים
+    status_process: עבד סטאטוס
+    image_update: עדכן תמונה
+    new: חדש
+    edit: ערוך
+    manage: נהל
+  labels:
+    search: חיפוש
+    from: מ-
+    to: עד
+    statuses: סטאטוסים
+    concordination: קונקורדינציה
+    stats: סטטיסטיקות
+    word_or_phrase: מילה או ביטוי
+    exact_match: התאמה מדויקת 
+    save: שמור
+    clear_selection: נקה בחירה
+    exisiting_cliques: קבוצות קיימות
+    

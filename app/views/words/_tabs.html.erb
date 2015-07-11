@@ -1,0 +1,24 @@
+<%= form_tag words_path, :method => :get, :remote => true, :hidden => true do %>
+  <p>
+    <%= text_field_tag :word_id %>
+    <%= submit_tag "Search", :name => "search_submit" %>
+  </p>
+<% end %>
+
+<div class="row">
+  <div class="medium-2 columns">
+    <%= select_tag "words_select", options_for_select(@words.collect { |w| [w.text, w.id] } ), {:multiple => true, :style => "height:350px" } %>
+  </div> 
+  <div class="medium-10 columns">
+    <dl class="tabs" data-tab>
+      <dd class="tab-title" id="index_tab"><a href="#index_display">לפי אינדקס</a></dd>
+      <dd class="tab-title" id="context_tab"><a href="#context_display">לפי הקשר</a></dd>
+    </dl>    
+    <div class="tabs-content">
+      <div class="content" id="index_display">
+      </div>
+      <div class="content" id="context_display">
+      </div>
+    </div>
+  </div>
+</div>

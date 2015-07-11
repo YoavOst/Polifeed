@@ -1,0 +1,35 @@
+<%= form_tag find_word_abs_status_path(st), {:remote => :true} do %>
+  <div class="row">
+    <div class="field large-4 columns">
+      <%= text_field_tag :abs_position, nil, :placeholder => "מיקום מההתחלה" %>
+    </div>
+    <div class="actions large-2 columns end">
+      <%= submit_tag "חפש לפי מיקום מההתחלה", :class => "radius tiny button" %>
+    </div>
+  </div>
+<% end %>
+<%= form_tag find_word_sen_status_path(st), {:remote => :true} do %>
+  <div class="row">
+    <div class="field large-2 columns">
+      <%= text_field_tag :sen_num, nil, :placeholder => "מספר משפט" %>
+    </div>
+    <div class="field large-2 columns">
+      <%= text_field_tag :sen_position, nil, :placeholder => "מיקום במשפט" %>
+    </div>
+    <div class="actions large-2 columns end">
+    <%= submit_tag "חפש לפי מיקום במשפט", :class => "radius tiny button" %>
+    </div>
+  </div>
+<% end %>
+<%= form_tag find_matching_phrase_status_path(st) do %>
+  <div class="row">
+    <div class="field large-4 columns">
+      <%= text_field_tag "marked_phrase_#{st.id}", nil, :placeholder => "סמן או הזן ביטוי" %>
+    </div>      
+    <div class="actions small-1 columns end">
+      <%= submit_tag "מצא מופעים נוספים", :class => "radius tiny button" %>
+    </div>
+  </div>
+<% end %>
+<%= link_to "בצע קונקורדונציה", words_path(:status => st), :method => :get %>
+

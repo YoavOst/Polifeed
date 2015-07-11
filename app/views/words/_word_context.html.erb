@@ -1,0 +1,10 @@
+<% word.statuses_index.each do |ix| %>
+  <blockquote>
+    <%= ix.status.summary(ix.sen_num-1, ix.sen_num+1).gsub(word.text, "<mark>#{word.text}</mark>").html_safe %>
+    <cite>
+      <%= link_to status_path(ix.status) do %>
+        <%= render partial: "statuses/credits", object:ix.status, as: :status %>
+      <% end %>
+    </cite>
+  </blockquote>
+<% end %>

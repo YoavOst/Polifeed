@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="small-8 small-centered columns">
+  <h2> המילה הכי ארוכה <h2>
+    <ol>
+    <% @w1 = Word.longest_words(10) %>
+    <% @w1.each do |w| %>
+      <li> <%= "#{w.text} - #{w.chars_count} תווים" %> </li>
+    <% end %>          
+    </ol>
+  </div>
+</div>

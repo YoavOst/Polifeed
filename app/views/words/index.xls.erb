@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:x="urn:schemas-microsoft-com:office:excel"
+  xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:html="http://www.w3.org/TR/REC-html40">
+  <% if !params[:clique_id].nil? then %>
+    <Worksheet ss:Name="<%="#{Clique.find(params[:clique_id]).name}"%>">
+  <% end %>
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">מילה</Data></Cell>
+        <Cell><Data ss:Type="String">פוליטיקאי</Data></Cell>
+        <Cell><Data ss:Type="String">מועד פרסום</Data></Cell>
+        <Cell><Data ss:Type="String">מיקום מההתחלה</Data></Cell>
+        <Cell><Data ss:Type="String">מספר משפט</Data></Cell>
+        <Cell><Data ss:Type="String">מילה במשפט</Data></Cell>
+      </Row>
+    <% @words.each do |word| %>
+      <% word.statuses_index.each do |ix| %>
+        <Row>
+          <Cell><Data ss:Type="String"><%= word.text %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= "#{ix.status.politician.full_name}" %></Data></Cell>
+          <Cell><Data ss:Type="Time"><%= "#{l ix.status.publish_time, format: :long}" %></Data></Cell>
+          <Cell><Data ss:Type="Number"><%= ix.abs_position %></Data></Cell>
+          <Cell><Data ss:Type="Number"><%= ix.sen_num %></Data></Cell>
+          <Cell><Data ss:Type="Number"><%= ix.sen_position %></Data></Cell>
+        </Row>
+      <% end %>
+    <% end %>
+    </Table>
+  </Worksheet>
+</Workbook>

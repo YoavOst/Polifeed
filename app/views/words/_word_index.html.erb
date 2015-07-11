@@ -1,0 +1,7 @@
+<% word.statuses_index.each do |ix| %>
+  <p>
+    <%= render partial: "statuses/credits", object: ix.status, as: :status %>
+    <br>
+    <%= "#{Status.human_attribute_name("abs_position")}: #{ix.abs_position}, #{Status.human_attribute_name("sen_num")}: #{ix.sen_num}, #{Status.human_attribute_name("sen_position")}: #{ix.sen_position}".html_safe %>
+  </p>
+<% end %>

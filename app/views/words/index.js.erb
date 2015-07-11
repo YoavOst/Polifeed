@@ -1,0 +1,2 @@
+$("#index_display").html("<%= j (render(partial: "word_index", collection: @words, as: :word)) %>");
+$("#context_display").html("<%= j (render(partial: "word_context", collection: @words, as: :word)) %>");

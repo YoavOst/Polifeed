@@ -1,0 +1,32 @@
+# == Schema Information
+#
+# Table name: status_indices
+#
+#  id           :integer          not null, primary key
+#  status_id    :integer
+#  abs_position :integer
+#  word_id      :integer
+#  sen_num      :integer
+#  sen_position :integer
+#
+# Indexes
+#
+#  fk_rails_21b696526a  (word_id)
+#  fk_rails_6b3ac368a4  (status_id)
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  status_id: 
+  abs_position: 1
+  word_id: 
+  sen_num: 1
+  sen_position: 1
+
+two:
+  status_id: 
+  abs_position: 1
+  word_id: 
+  sen_num: 1
+  sen_position: 1

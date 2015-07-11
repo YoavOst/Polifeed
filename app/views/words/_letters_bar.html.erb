@@ -1,0 +1,7 @@
+<div class="row">
+  <div id="letters_bar">
+    <% (first..last).each do |letter| %>
+      <%= link_to letter, words_path(:letter => letter), :class => "letter" %>
+    <% end %>
+  </div>
+</div>

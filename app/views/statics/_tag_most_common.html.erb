@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="small-8 small-centered columns">
+  <h2> התגית הכי נפוצה <h2>
+    <ol>
+    <% @t1 = Tag.most_common(10) %>
+    <% @t1.each do |t| %>
+      <li> <%= "#{t.text} - #{t.amount} מופעים" %> </li>
+    <% end %>          
+    </ol>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<%= form_for st do |f_st| %>
+  <div class="row">  
+    <%= f_st.text_area :text, :id => "text_#{st.id}", :class => "field large-10 large-offset-1 columns end", :label => false, :disabled => true, :rows => 8 %>
+  </div>
+  <div class="row">
+    <div class="field large-9 columns">   
+      <%= f_st.text_field :tag_tokens, :id => "status_tag_tokens_#{st.id}", :data => {load: st.tags}, :label => false %>
+    </div>
+  </div>
+  <%= f_st.submit :class => "tiny radius button" if params[:user]=="admin" %>
+<% end %>
+
+
+

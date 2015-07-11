@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "Polifeed5" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <script>var Chartkick = {"language": "he"};</script>
+    <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <%= render "layouts/header" %>
+    <%= display_flash_messages %>
+    <%= yield %>
+    <%= javascript_include_tag "application" %>
+    <%= render "layouts/footer" %>
+  </body>
+
+</html>

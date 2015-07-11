@@ -1,0 +1,9 @@
+<% Party.all.each do |pa| %>
+  <%= link_to pa.name, party_path(pa), data: {dropdown: "hover#{pa.id}", options: "is_hover:true;hover_timeout:5000"}, class: "small round button" %>
+  <ul id=<%= "hover#{pa.id}" %> class="f-dropdown" data-dropdown-content>
+  <% pa.politicians.each do |po| %>  
+    <li> <%= link_to po.full_name, politician_statuses_path(po) %> </li>          
+  <% end %>
+  </ul>
+<% end %>
+

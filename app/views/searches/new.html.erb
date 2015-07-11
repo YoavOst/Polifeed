@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="medium-5 columns">
+    <h1>חפש את הסטאטוס</h1> 
+  </div>
+</div>
+
+<%= form_for @search do |f| %>
+  <%= render partial: "structured_data",  object: f, as: :f %>
+  <%= render partial: "word_or_phrase",   object: f, as: :f %>
+  <%= render partial: "actions",          object: f, as: :f %>
+<% end %>
+
+

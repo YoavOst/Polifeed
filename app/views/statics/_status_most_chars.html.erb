@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="small-8 small-centered columns">
+  <h2> הסטאטוסים עם הכי הרבה תווים: <h2>
+    <ol>
+    <% @s1 = Status.most_chars(10) %>
+    <% @s1.each do |s| %>
+      <li> <%= render partial: "statuses/credits", object:s, as: :status %> - <%= "#{s.tokens} תווים" %> </li>
+    <% end %>          
+    </ol>
+  </div>
+</div>

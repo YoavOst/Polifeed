@@ -1,0 +1,6 @@
+$('#new_clique').remove();
+$('#new_link').show();
+$('#cliques').append($("<option></option>").attr("value", <%= @clique.id %>).text("<%= @clique.name %>"))
+$('#cliques').val("<%= @clique.id %>")
+$('#clique_id').val("<%= @clique.id %>")
+$('#temp_id').submit()

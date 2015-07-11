@@ -1,0 +1,26 @@
+# == Schema Information
+#
+# Table name: phrase_indices
+#
+#  id           :integer          not null, primary key
+#  phrase_id    :integer
+#  abs_position :integer
+#  word_id      :integer
+#
+# Indexes
+#
+#  fk_rails_6731030c3e  (word_id)
+#  fk_rails_ec9d3d1f15  (phrase_id)
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  phrase_id: 
+  abs_position: 1
+  word_id: 
+
+two:
+  phrase_id: 
+  abs_position: 1
+  word_id: 

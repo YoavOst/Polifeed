@@ -1,0 +1,8 @@
+<div class="row"> 
+  <div class="actions large-4 large-offset-8 buttons">
+    <%= link_to "קבוצות", cliques_path, :class => "small radius button", :data => {:"reveal-id" => "cliques_modal", :"reveal-ajax" => :true, :remote => true } %>  
+    <%= link_to "ייצא קבוצה ל-excel", words_path(:format => "xls", :params => params) , :class => "small radius button" %>
+  </div>
+</div>
+
+<div id="cliques_modal" class="reveal-modal" data-reveal></div>

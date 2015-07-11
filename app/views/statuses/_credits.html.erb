@@ -1,0 +1,1 @@
+<%= @text = "#{status.politician.full_name}, #{status.politician.party.name}, #{Status.human_attribute_name("publish_time")}: #{l status.publish_time, format: :long}".html_safe %>

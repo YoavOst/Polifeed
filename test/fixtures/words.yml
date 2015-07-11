@@ -1,0 +1,22 @@
+# == Schema Information
+#
+# Table name: words
+#
+#  id          :integer          not null, primary key
+#  text        :string(255)
+#  chars_count :integer
+#
+# Indexes
+#
+#  index_words_on_text  (text) UNIQUE
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  text: MyString
+  chars_count: 1
+
+two:
+  text: MyString
+  chars_count: 1

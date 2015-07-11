@@ -1,0 +1,20 @@
+<div class="icon-bar four-up sticky" role="navigation">
+  <%= link_to stats_path, { class: "item", "aria-labelledby": "#itemlabelstats" } do %> 
+    <i class="fi-lightbulb"></i>
+    <label id='itemlabelstats'><%= t("labels.stats") %></label>
+  <% end %>
+  <%= link_to concordination_path, { class: "item", "aria-labelledby": "#itemlabelconcordination" } do %> 
+    <i class="fi-text-color"></i>
+    <label id='itemlabelconcordination'><%= t("labels.concordination") %></label>
+  <% end %>
+  <%= link_to search_path, { class: "item", "aria-labelledby": "#itemlabelsearch" } do %> 
+    <i class="fi-magnifying-glass"></i>
+    <label id='itemlabelsearch'><%= t("labels.search") %></label>
+  <% end %>
+  <%= link_to statuses_path(), { class: "item", "aria-labelledby": "#itemlabelstatuses" } do %> 
+    <i class="fi-social-facebook"></i>
+    <label id='itemlabelstatuses'><%= t("labels.statuses") %></label>
+  <% end %>
+</div>
+
+

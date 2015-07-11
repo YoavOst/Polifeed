@@ -1,0 +1,42 @@
+# == Schema Information
+#
+# Table name: statuses
+#
+#  id              :integer          not null, primary key
+#  fb_status_id    :string(255)
+#  politician_id   :integer
+#  publish_time    :datetime
+#  fb_get_time     :datetime
+#  is_processed    :boolean
+#  tokens_count    :integer
+#  words_count     :integer
+#  sentences_count :integer
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#
+# Indexes
+#
+#  index_statuses_on_politician_id  (politician_id)
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fb_status_id: MyString
+  politician_id: 
+  publish_time: 2015-03-12 18:40:53
+  fb_get_time: 2015-03-12 18:40:53
+  is_processed: false
+  tokens_count: 1
+  word_count: 1
+  sentences_count: 1
+
+two:
+  fb_status_id: MyString
+  politician_id: 
+  publish_time: 2015-03-12 18:40:53
+  fb_get_time: 2015-03-12 18:40:53
+  is_processed: false
+  tokens_count: 1
+  word_count: 1
+  sentences_count: 1

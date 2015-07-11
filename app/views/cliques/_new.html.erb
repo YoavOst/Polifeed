@@ -1,0 +1,4 @@
+<%= form_for @clique, remote: true do |f| %>
+  <%= f.text_field :name, :label => false, :placeholder => Clique.human_attribute_name("name") %>
+  <%= f.submit %>
+<% end %>
